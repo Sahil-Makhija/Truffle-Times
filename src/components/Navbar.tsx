@@ -21,14 +21,14 @@ const Navbar: React.FC = () => {
   }, []); 
   return (
     <nav
-      className={`z-50 flex-center fixed h-20 w-full duration-500 transition-[background-color] bg-gradient-to-r from-black to-[#00000022] from-40%`}
+      className={`z-50 flex items-center md:justify-evenly max-md:justify-between fixed max-md:h-16 md:h-20 w-full duration-500 transition-[background-color] bg-transparent-to-r from-black to-[#00000022] from-40% max-md:px-5 `}
       style={{
         backgroundColor: transparent ? "rgba(0, 0, 0, 0.87)" : '',
       }}
     >
       <a href="/">
         <img
-          className="h-14 object-contain"
+          className="h-10 md:h-14 object-contain"
           src={Logo}
           alt="_truffleTimes"
           loading="lazy"
@@ -45,6 +45,7 @@ const Navbar: React.FC = () => {
           </a>
         ))}
       </div>
+      <div className="md:hidden">Menu</div>
     </nav>
   );
 };

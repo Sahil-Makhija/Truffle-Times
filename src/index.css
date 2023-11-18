@@ -17,7 +17,7 @@
 
 .trans-expand{
   font-family: "Mango";
-  @apply tracking-widest underline cursor-pointer font-[400] text-2xl hover:tracking-[0.2em]  duration-300 delay-75 uppercase decoration-[#eedb99]
+  @apply tracking-widest underline cursor-pointer font-[400]  hover:tracking-[0.2em]  duration-300 delay-75 uppercase decoration-text-hover
 }
 
 .font-mango-small{

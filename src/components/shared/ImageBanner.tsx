@@ -1,16 +1,18 @@
-import React, { ComponentProps } from "react";
+import React, { ComponentProps, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
+import ViewOutDiv from "../ViewOutDiv";
 
 const ImageBanner: React.FC<
   { containerClass?: string } & ComponentProps<"img">
 > = ({ containerClass = "", className = "", ...props }) => {
+  useEffect(()=>{},[props.src])
   return (
     <div className={twMerge("w-max h-full overflow-hidden relative ", containerClass)}>
       <img
-        className={twMerge("object-contain h-full w-full tilt animate-slideRight ", className)}
+        className={twMerge("object-cover h-full w-full tilt animate-slideRight ", className)}
         {...props}
       />
-      <div className="bg-white opa h-full w-full top-0 absolute translate-x-[100%] animate-slideRightOut"> </div>
+      <ViewOutDiv />
     </div>
   );
 };
