@@ -1,12 +1,13 @@
-import React, { useState , useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../assets/images/logo.webp";
 import { navbarLinks } from "../constants";
+import { Menu } from "lucide-react";
 
 const Navbar: React.FC = () => {
   const [transparent, setTransparent] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPosition = window.scrollY;      
+      const currentScrollPosition = window.scrollY;
       if (currentScrollPosition > 100) {
         setTransparent(true);
       } else {
@@ -14,16 +15,16 @@ const Navbar: React.FC = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []); 
+  }, []);
   return (
     <nav
       className={`z-50 flex items-center md:justify-evenly max-md:justify-between fixed max-md:h-16 md:h-20 w-full duration-500 transition-[background-color] bg-transparent-to-r from-black to-[#00000022] from-40% max-md:px-5 `}
       style={{
-        backgroundColor: transparent ? "rgba(0, 0, 0, 0.87)" : '',
+        backgroundColor: transparent ? "rgba(0, 0, 0, 0.87)" : "",
       }}
     >
       <a href="/">
@@ -45,7 +46,7 @@ const Navbar: React.FC = () => {
           </a>
         ))}
       </div>
-      <div className="md:hidden">Menu</div>
+      <Menu className="text-text-hover md:hidden cursor-pointer" />
     </nav>
   );
 };

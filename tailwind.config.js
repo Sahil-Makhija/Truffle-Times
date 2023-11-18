@@ -23,15 +23,20 @@ export default {
       animation: {
         slideRight: "slideInView 800ms ease-in",
         slideRightOut: "slideOutView 500ms ease-in-out",
+        slideLeft:"slideInViewReverse 800ms ease-in"
       },
       keyframes: {
         slideInView: {
           from: { opacity: 0, transform: "translateX(-100%)" },
           to: { opacity: 1, transform: "translateX(0)" },
         },
+        slideInViewReverse:{
+          from: { opacity: 0, transform: "translateX(100%)" },
+          to: { opacity: 1, transform: "translateX(0)" },
+        },
         slideOutView: {
-          "0%": { opacity: 0, transform: "translateX(0%)" },
-          "70%": { opacity: 1, transform: "translateX(130%)" },
+          "from": { opacity: 0, transform: "translateX(0%)" },
+          "to": { opacity: 1, transform: "translateX(130%)" },
         },
       },
     },

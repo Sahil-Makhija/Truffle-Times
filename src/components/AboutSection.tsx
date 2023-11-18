@@ -1,5 +1,6 @@
 import React from "react";
 import AboutImage from "../assets/images/about-section-image.webp";
+import { MoveRight } from "lucide-react";
 
 const AboutSection: React.FC = () => {
   return (
@@ -25,7 +26,7 @@ const AboutSection: React.FC = () => {
           you work with us, we prioritize bringing your brand’s vision to life
           because for us ‘You are not just a client but more than that’.
         </p>
-        <span className="trans-expand text-[1.7rem]">tell me more</span>
+        <span className="trans-expand text-xl md:text-3xl flex items-center gap-1">tell me more <MoveRight size={20} /></span>
       </div>
     </div>
   );

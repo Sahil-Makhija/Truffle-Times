@@ -2,6 +2,7 @@ import React from 'react'
 import Heading from './shared/Heading'
 import ServiceImage from "../assets/images/service-section-image.webp"
 import Accordian from './shared/Accordian'
+import {MoveRight} from'lucide-react'
 
 const ServiceSection:React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const ServiceSection:React.FC = () => {
           <img src={ServiceImage} className='border object-contain md:w-[35%] w-[90%]' alt="" />
           <Accordian/>
         </div>
-        <span className='trans-expand text-3xl '>Discover Our Services</span>
+        <span className='trans-expand text-xl md:text-3xl flex items-center gap-1 '>Discover Our Services <MoveRight size={20} /> </span>
     </section>
   )
 }
