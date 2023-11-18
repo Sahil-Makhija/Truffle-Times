@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import ImageBanner from "./shared/ImageBanner";
-import ModelImage1  from "../assets/images/model-1.avif"
+// import ModelImage1  from "../assets/images/model-1.avif"
 import ModelImage2 from "../assets/images/model-2.jpg";
 import StudioImage from "../assets/images/studio-image.jpg";
 import ViewOutDiv from "./ViewOutDiv";
 
 const HeroSection: React.FC = () => {
-  const [key,setKey] = useState(1)
-  const [modelImage,setModelImage] = useState(ModelImage2)
+  const [key] = useState(1)
+  const [modelImage] = useState(ModelImage2)
   return (
-    <div className="w-full h-screen bg-black flex items-center justify-center bg-black relative ">
+    <div className="w-full h-screen bg-black flex items-center justify-center relative ">
       <div className="uppercase bg-white p-7 text-xl absolute z-10 hidden md:block ">
         creative Marketive Agency
       </div>
