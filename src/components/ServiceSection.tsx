@@ -11,10 +11,10 @@ const ServiceSection: React.FC = () => {
       <div className="flex max-md:flex-col items-center justify-evenly gap-8">
         <img
           src={ServiceImage}
-          className="border object-contain md:w-[35%] w-[90%]"
+          className="border object-contain md:w-[35%] w-[80%]"
           alt=""
         />
-        <div className="w-[35%]  md:h-max flex-center flex-col">
+        <div className="md:w-[35%] w-[95%]  md:h-max flex-center flex-col">
           <Accordian />
         </div>
       </div>

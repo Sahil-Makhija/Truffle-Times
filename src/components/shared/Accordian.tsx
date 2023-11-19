@@ -22,7 +22,7 @@ const Accordian: React.FC = () => {
 
 export default Accordian;
 
-export const Bellow: React.FC<{
+const Bellow: React.FC<{
   title: string;
   description: string;
   bellowId: string;
@@ -32,16 +32,16 @@ export const Bellow: React.FC<{
   const isExpanded = bellowId === expanded;
   return (
     <div
-      className="w-full transition-[height] overflow-hidden duration-700 ease-in-out relative flex flex-col p-3 min-h-[4rem]  "
+      className=" w-full transition-[height] overflow-hidden duration-700 ease-in-out relative flex flex-col p-3 min-h-[4rem]  "
       style={{
         height: isExpanded ? "13rem" : "4rem",
-        justifyContent: "center",
+        justifyContent: isExpanded ? "start" : "center",
       }}
     >
-      <span className="font-mango text-[2rem] font-bold tracking-widest">
+      <span className="font-mango text-[1.5rem] md:text-[2rem] font-bold tracking-widest">
         {title}
       </span>
-      {isExpanded && <p className="flex-grow">{description}</p>}
+      {isExpanded && <p className="overflow-y-scroll">{description}</p>}
       {!isExpanded && (
         <div className="w-full  h-full absolute top-0 bg-gradient-to-b from-transparent from-70% to-secondary" />
       )}
@@ -56,7 +56,7 @@ export const Bellow: React.FC<{
           style={{ rotate: isExpanded ? "180deg" : "" }}
         />
       )}
-      <Divider className="w-full absolute bottom-0 h-[0.5px] bg-[#00000044] " />
+      <Divider className="w-full absolute bottom-0 h-[1px] md:h-[0.5px] md:bg-[#00000044] " />
     </div>
   );
 };
