@@ -58,7 +58,6 @@ const HeroSection: React.FC = () => {
               }}
             />
           </div>
-          {/* <div className="max-w-full border">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, officiis.</div> */}
           <Title key={`title-key-${key}`} title={heroSectionData[key].title} animation={animation} />
         </div>
       </div>

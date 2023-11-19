@@ -8,7 +8,7 @@ const Title: React.FC<{ title: string; animation: string }> = ({
   return (
     <div className="overflow-hidden  -rotate-90  flex-center flex-col relative ">
       <span
-        className={` max-md:text-4xl md:text-[5rem] uppercase ${animation} `}
+        className={` max-md:text-6xl md:text-[7rem] uppercase ${animation} font-mango `}
       >
         {title}
       </span>
